@@ -1,5 +1,4 @@
-// BOOK CONSTRUCTOR
-// Handle creating the book object 
+// BOOK CONSTRUCTOR - handle creating the book object 
 function Book(date, title, author) {
     this.date = date;
     this.title = title;
@@ -10,8 +9,7 @@ function Book(date, title, author) {
 
 // UI CONSTRUCTOR
 // Set of prototype methods to add and delete the books, and show the alerts
-function UI() {}
-// Empty function, everything else will go inside the prototype
+function UI() {} // Empty function, everything else will go inside the prototype
 
 // Add book to list
 UI.prototype.addBookToList = function(book) {
@@ -76,14 +74,14 @@ document.getElementById("book-form").addEventListener("submit", function(e){
     
     // Once we submit these, we want to instantiate the Book constructor
     // Instantiate a book
-    const book = new Book(title, author, date);
+    const book = new Book(date, title, author);
 
     // We want to add a book to the table, the UI object will take care of that
     // Instantiate UI
     const ui = new UI();
 
     // Validation
-    if (title === "" || author === "") {
+    if (title === "") {
         // Error alert
         ui.showAlert("Please fill in the fields.");
     } else {
