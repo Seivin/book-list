@@ -103,7 +103,7 @@ document.getElementById("book-form").addEventListener("submit", function(e){
 });
 
 // EVENT LISTENER FOR DELETE BOOK
-document.getElementById("book-list").addEventListener("click", function (e) {
+document.getElementById("book-list").addEventListener("click", function(e) {
 
     // Instantiate UI
     const ui = new UI();
