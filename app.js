@@ -1,9 +1,9 @@
 // BOOK CONSTRUCTOR
 // Handle creating the book object 
-function Book(title, author, date) {
+function Book(date, title, author) {
+    this.date = date;
     this.title = title;
     this.author = author;
-    this.date = date;
 }
 
 
