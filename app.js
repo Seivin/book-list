@@ -59,9 +59,9 @@ UI.prototype.deleteBook = function(target) {
 
 // Clear fields
 UI.prototype.clearFields = function() {
+    document.getElementById("date").value = "";
     document.getElementById("title").value = "";
     document.getElementById("author").value = "";
-    document.getElementById("date").value = "";
 }
 
 
@@ -70,9 +70,9 @@ UI.prototype.clearFields = function() {
 document.getElementById("book-form").addEventListener("submit", function(e){
     // First we want to submit these fields so let's create the variables
     // Get form values
+    const date = document.getElementById("date").value;
     const title = document.getElementById("title").value;
     const author = document.getElementById("author").value;
-    const date = document.getElementById("date").value;
     
     // Once we submit these, we want to instantiate the Book constructor
     // Instantiate a book
