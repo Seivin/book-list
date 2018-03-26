@@ -1,8 +1,8 @@
 class Book {
-    constructor(title, author, isbn) {
+    constructor(title, author, date) {
         this.title = title;
         this.author = author;
-        this.isbn = isbn;
+        this.date = date;
     }
 }
 
@@ -13,7 +13,7 @@ class UI {
         row.innerHTML = `
         <td>${book.title}</td>
         <td>${book.author}</td>
-        <td>${book.isbn}</td>
+        <td>${book.date}</td>
         <td><a href="#" class="delete"></a></td>
         `;
         list.appendChild(row);
@@ -39,7 +39,7 @@ class UI {
     clearFields() {
         document.getElementById("title").value = "";
         document.getElementById("author").value = "";
-        document.getElementById("isbn").value = "";
+        document.getElementById("date").value = "";
     }
 }
 
@@ -51,10 +51,10 @@ document.getElementById("book-form").addEventListener("submit", function(e){
     // Get form values
     const title = document.getElementById("title").value;
     const author = document.getElementById("author").value;
-    const isbn = document.getElementById("isbn").value;
+    const date = document.getElementById("date").value;
     // Once we submit these, we want to instantiate the Book constructor
     // Instantiate a book
-    const book = new Book(title, author, isbn);
+    const book = new Book(title, author, date);
     // We want to add a book to the table, the UI object will take care of that
     // Instantiate UI
     const ui = new UI();
