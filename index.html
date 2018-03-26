@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Book list</title>
 </head>
 <body>
@@ -13,6 +14,10 @@
         <form id="book-form">
             <div class="form-row">
                 <div class="col-sm-12">
+                    <label for="title">Date</label>
+                    <input type="text" id="date" class="" placeholder="Date">
+                </div>
+                <div class="col-sm-12">
                     <label for="title">Title</label>
                     <input type="text" id="title" class="" placeholder="Title">
                 </div>
@@ -20,19 +25,15 @@
                     <label for="title">Author</label>
                     <input type="text" id="author" class="" placeholder="Author">
                 </div>
-                <div class="col-sm-12">
-                    <label for="title">ISBN</label>
-                    <input type="text" id="isbn" class="" placeholder="ISBN">
-                </div>
                 <input type="submit" value="Submit" class="btn btn-primary">
             </div>
         </form>
         <table class="table">
             <thead>
                 <tr>
+                    <th>Date</th>
                     <th>Title</th>
                     <th>Author</th>
-                    <th>ISBN</th>
                 </tr>
             </thead>
             <tbody id="book-list"></tbody>
