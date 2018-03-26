@@ -20,9 +20,9 @@ UI.prototype.addBookToList = function(book) {
     const row = document.createElement("tr");
     // Insert cols
     row.innerHTML = `
+    <td>${book.date}</td>
     <td>${book.title}</td>
     <td>${book.author}</td>
-    <td>${book.date}</td>
     <td><a href="#" class="delete"></a></td>
     `;
 
