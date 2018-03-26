@@ -44,7 +44,7 @@ UI.prototype.showAlert = function(message, className) {
     container.insertBefore(div, form);
 
     // Timeout after 3s
-    setTimeout(function(){
+    setTimeout(function() {
         document.querySelector(".alert").remove();
     }, 3000);
 }
@@ -98,7 +98,7 @@ document.getElementById("book-form").addEventListener("submit", function(e){
         ui.clearFields();
     }
 
-    // Prevent the form from submitting, stops the intial behavior
+    // Prevent the form from submitting, stops the initial behavior
     e.preventDefault();
 });
 

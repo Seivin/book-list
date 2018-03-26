@@ -42,7 +42,6 @@ class UI {
         document.getElementById("isbn").value = "";
     }
 }
-// It looks like a React app
 
 
 
