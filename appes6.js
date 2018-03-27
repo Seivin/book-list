@@ -43,45 +43,32 @@ class UI {
     }
 }
 
-
-
-// EVENT LISTENER FOR ADD BOOK
-document.getElementById("book-form").addEventListener("submit", function(e){
-    // First we want to submit these fields so let's create the variables
-    // Get form values
+document.getElementById("book-form").addEventListener("submit", function(e){ // EVENT LISTENER FOR ADD BOOK
     const title = document.getElementById("title").value;
     const author = document.getElementById("author").value;
     const date = document.getElementById("date").value;
-    // Once we submit these, we want to instantiate the Book constructor
-    // Instantiate a book
+
     const book = new Book(title, author, date);
-    // We want to add a book to the table, the UI object will take care of that
-    // Instantiate UI
+
     const ui = new UI();
-    // Validation
+
     if (title === "" || author === "") {
-        // Error alert
         ui.showAlert("Please fill in the fields.");
     } else {
-        // Add book to list
         ui.addBookToList(book);
-        // Show success
         ui.showAlert("Book added!", "success");
-        // Clear fields
-        // Just after a book is added to the list
         ui.clearFields();
     }
-    // Prevent the form from submitting, stops the intial behavior
+
     e.preventDefault();
 });
 
-// EVENT LISTENER FOR DELETE BOOK
-document.getElementById("book-list").addEventListener("click", function (e) {
-    // Instantiate UI
+document.getElementById("book-list").addEventListener("click", function (e) { // EVENT LISTENER FOR DELETE BOOK
     const ui = new UI();
-    // Delete book
+
     ui.deleteBook(e.target);
-    // Show an alert
+
     ui.showAlert("Book removed", "success");
+
     e.preventDefault();
 });
